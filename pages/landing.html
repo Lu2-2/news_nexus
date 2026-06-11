@@ -1,0 +1,70 @@
+<!-- ══════════════════════════════════════════════
+     pages/landing.html
+     NEXUS — Partial: Landing Page Screen
+     Included via JS innerHTML or SSI into index.html
+══════════════════════════════════════════════ -->
+<div id="s-landing" class="screen active">
+  <div class="land-bg">
+    <div class="land-grid"></div>
+    <div class="land-orb"></div>
+    <div class="land-orb2"></div>
+
+    <!-- Top bar -->
+    <div class="land-topbar">
+      <span class="land-logo">NEXUS<span>// REDE CLASSIFICADA</span></span>
+      <div class="land-topbar-links">
+        <a href="#" onclick="goLogin(event)">ACESSAR</a>
+        <a href="#" onclick="goLogin(event)">CREDENCIAL</a>
+        <a href="#" onclick="goLogin(event)">PROTOCOLO</a>
+        <div class="clearance-badge">NÍVEL 5 ATIVO</div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="land-hero">
+      <p class="land-eyebrow">REDE DE INTELIGÊNCIA CLASSIFICADA &nbsp;//&nbsp; ACESSO RESTRITO</p>
+      <h1 class="land-headline">
+        O QUE ELES<br>
+        <em>NÃO QUEREM</em><br>
+        QUE VOCÊ SAIBA
+      </h1>
+      <p class="land-sub">
+        Documentos <strong>vazados</strong>. Testemunhos <strong>censurados</strong>. Fenômenos <strong>inexplicáveis</strong>.<br>
+        A verdade que governos ocultam há décadas — em um único portal.
+      </p>
+      <div class="land-cta-wrap">
+        <button class="land-cta" onclick="goLogin()">
+          INICIAR SESSÃO SEGURA →
+        </button>
+        <button class="land-cta-ghost" onclick="goLogin()">
+          Já possuo credencial
+        </button>
+      </div>
+    </div>
+
+    <!-- Classified strip -->
+    <div class="classified-strip">
+      <span class="stamp">CLASSIFICADO</span>
+      <span>Este portal requer autenticação de dois fatores. Todo acesso é monitorado e registrado. Ao continuar, você aceita o Protocolo de Silêncio NEXUS-7.</span>
+    </div>
+
+    <!-- Preview cards -->
+    <div class="land-preview">
+      <div class="prev-card" onclick="goLogin()">
+        <span class="prev-cat">ARQUIVO ALFA</span>
+        <p class="prev-title">Documentos do Pentágono confirmam presença de objetos de origem não-terrestre em águas internacionais desde 1952</p>
+        <span class="prev-time">Decriptado há 12 minutos</span>
+      </div>
+      <div class="prev-card" onclick="goLogin()">
+        <span class="prev-cat">NÍVEL 4</span>
+        <p class="prev-title">Relatório interno da NASA descreve estruturas artificiais detectadas na face oculta da Lua em 2023</p>
+        <span class="prev-time">Decriptado há 38 minutos</span>
+      </div>
+      <div class="prev-card" onclick="goLogin()">
+        <span class="prev-cat">URGENTE</span>
+        <p class="prev-title">Fonte dentro do governo revela projeto de supressão de tecnologia de propulsão desenvolvida com origem desconhecida</p>
+        <span class="prev-time">Decriptado há 1h04</span>
+      </div>
+    </div>
+  </div>
+</div>

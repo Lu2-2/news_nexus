@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEXUS // Rede de Inteligência Classificada</title>
+  <meta name="description" content="Portal de notícias classificadas. Acesso restrito. O que governos não querem que você saiba.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="icon" type="image/x-icon" href="imgs/nexus_logo.png">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     SCREEN 1 — LANDING PAGE
+══════════════════════════════════════════════ -->
+<div id="s-landing" class="screen active">
+  <div class="land-bg">
+    <div class="land-grid"></div>
+    <div class="land-orb"></div>
+    <div class="land-orb2"></div>
+
+    <div class="land-topbar">
+      <span class="land-logo">NEXUS<span>// REDE CLASSIFICADA</span></span>
+      <div class="land-topbar-links">
+        <a href="#" onclick="goLogin(event)">ACESSAR</a>
+        <a href="#" onclick="goLogin(event)">CREDENCIAL</a>
+        <a href="#" onclick="goLogin(event)">PROTOCOLO</a>
+        <div class="clearance-badge">NÍVEL 5 ATIVO</div>
+      </div>
+    </div>
+
+    <div class="land-hero">
+      <p class="land-eyebrow">REDE DE INTELIGÊNCIA CLASSIFICADA &nbsp;//&nbsp; ACESSO RESTRITO</p>
+      <h1 class="land-headline">
+        O QUE ELES<br>
+        <em>NÃO QUEREM</em><br>
+        QUE VOCÊ SAIBA
+      </h1>
+      <p class="land-sub">
+        Documentos <strong>vazados</strong>. Testemunhos <strong>censurados</strong>. Fenômenos <strong>inexplicáveis</strong>.<br>
+        A verdade que governos ocultam há décadas — em um único portal.
+      </p>
+      <div class="land-cta-wrap">
+        <button class="land-cta" onclick="goLogin()">INICIAR SESSÃO SEGURA →</button>
+        <button class="land-cta-ghost" onclick="goLogin()">Já possuo credencial</button>
+      </div>
+    </div>
+
+    <div class="classified-strip">
+      <span class="stamp">CLASSIFICADO</span>
+      <span>Este portal requer autenticação de dois fatores. Todo acesso é monitorado e registrado. Ao continuar, você aceita o Protocolo de Silêncio NEXUS-7.</span>
+    </div>
+
+    <div class="land-preview">
+      <div class="prev-card" onclick="goLogin()">
+        <span class="prev-cat">ARQUIVO ALFA</span>
+        <p class="prev-title">Documentos do Pentágono confirmam presença de objetos de origem não-terrestre em águas internacionais desde 1952</p>
+        <span class="prev-time">Decriptado há 12 minutos</span>
+      </div>
+      <div class="prev-card" onclick="goLogin()">
+        <span class="prev-cat">NÍVEL 4</span>
+        <p class="prev-title">Relatório interno da NASA descreve estruturas artificiais detectadas na face oculta da Lua em 2023</p>
+        <span class="prev-time">Decriptado há 38 minutos</span>
+      </div>
+      <div class="prev-card" onclick="goLogin()">
+        <span class="prev-cat">URGENTE</span>
+        <p class="prev-title">Fonte dentro do governo revela projeto de supressão de tecnologia de propulsão desenvolvida com origem desconhecida</p>
+        <span class="prev-time">Decriptado há 1h04</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SCREEN 2 — LOGIN / REGISTER / RECOVERY
+══════════════════════════════════════════════ -->
+<div id="s-login" class="screen">
+  <div class="lg-grid"></div>
+  <div class="lg-glow"></div>
+
+  <div class="lg-wrap">
+    <div class="lg-logo">NEXUS</div>
+    <p class="lg-sub">// AUTENTICAÇÃO SEGURA</p>
+
+    <div class="lg-card">
+
+      <!-- ─── PAINEL DE LOGIN ─── -->
+      <div class="lg-screen" id="lg-panel-login">
+        <div class="lg-avatar-wrap">
+          <div class="lg-avatar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="1"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+        </div>
+        <h2 class="lg-title">CREDENCIAL DE AGENTE</h2>
+        <p class="lg-desc">Insira suas credenciais de acesso classificado. Sessão criptografada AES-256.</p>
+
+        <div class="pending-banner" id="pending-banner">
+          <span style="color:var(--amber);font-size:1rem;flex-shrink:0;">⚠</span>
+          <span>Sua credencial está <strong style="color:var(--amber);">EM ANÁLISE</strong>. Aguarde aprovação do Conselho NEXUS antes de tentar novo acesso.</span>
+        </div>
+
+        <div class="lg-field">
+          <label class="lg-label" for="i-email">// ID DE AGENTE (E-MAIL)</label>
+          <div class="lg-input-wrap">
+            <input class="lg-input" type="email" id="i-email" placeholder="agente@nexus.net" autocomplete="email" maxlength="120">
+          </div>
+          <p class="err-msg" id="err-email">⚠ ID de agente inválido.</p>
+          <p class="err-msg" id="email-hint" style="color:var(--text3);border-left-color:var(--text3);background:transparent;">// Agente não encontrado — solicite credencial.</p>
+        </div>
+
+        <div class="lg-field">
+          <label class="lg-label" for="i-pwd">// CÓDIGO DE ACESSO</label>
+          <div class="lg-input-wrap">
+            <input class="lg-input" type="password" id="i-pwd" placeholder="••••••" autocomplete="current-password">
+            <button class="eye-btn" id="eye-btn" type="button" aria-label="Mostrar código">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <div class="pwd-meta">
+            <div class="pwd-dots" id="pwd-dots">
+              <div class="pwd-dot" id="d1"></div><div class="pwd-dot" id="d2"></div>
+              <div class="pwd-dot" id="d3"></div><div class="pwd-dot" id="d4"></div>
+              <div class="pwd-dot" id="d5"></div><div class="pwd-dot" id="d6"></div>
+            </div>
+            <span class="char-count" id="char-cnt">0 / 6</span>
+          </div>
+          <p class="err-msg" id="err-pwd">⚠ Código inválido.</p>
+        </div>
+
+        <p class="err-msg" id="err-auth" style="margin-bottom:0.8rem;"></p>
+
+        <a class="lg-forgot" id="btn-forgot">// Recuperar credencial de acesso</a>
+        <button class="lg-btn lg-btn-primary" id="btn-login" disabled><span>AUTENTICAR</span></button>
+        <button class="lg-btn lg-btn-amber" id="btn-go-register">+ SOLICITAR CREDENCIAL</button>
+
+        <div style="margin-top:1.1rem;">
+          <button onclick="goLanding()" class="back-btn">← PROTOCOLO DE SAÍDA</button>
+        </div>
+      </div>
+
+
+      <!-- ─── PAINEL DE CADASTRO ─── -->
+      <div class="lg-screen hidden" id="lg-panel-register">
+        <div class="lg-avatar-wrap">
+          <div class="lg-avatar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+              <line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+          </div>
+        </div>
+        <h2 class="lg-title">SOLICITAR CREDENCIAL</h2>
+        <p class="lg-desc">Registre-se como agente NEXUS. Sua solicitação será analisada pelo Conselho antes de liberar acesso.</p>
+
+        <div class="register-ok" id="register-ok">
+          <div class="check-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>CREDENCIAL SUBMETIDA</h3>
+          <p>Agente <strong id="reg-codename-ok">—</strong> registrado com sucesso.<br>
+          ID: <strong id="reg-email-ok" style="color:var(--text2);">—</strong><br><br>
+          Sua solicitação está <strong>EM ANÁLISE</strong>. O Conselho NEXUS irá revisar e ativar sua credencial em breve.</p>
+          <button class="lg-btn lg-btn-primary" id="btn-reg-ok-login" style="margin-top:1rem;"><span>IR AO LOGIN</span></button>
+        </div>
+
+        <div class="lg-field">
+          <label class="lg-label" for="r-email">// ID DE AGENTE (E-MAIL)</label>
+          <div class="lg-input-wrap">
+            <input class="lg-input" type="email" id="r-email" placeholder="agente@nexus.net" autocomplete="email" maxlength="120">
+          </div>
+          <p class="err-msg" id="err-r-email">⚠ E-mail inválido.</p>
+        </div>
+
+        <div class="lg-field">
+          <label class="lg-label" for="r-codename">// CODINOME DO AGENTE</label>
+          <div class="lg-input-wrap">
+            <input class="lg-input" type="text" id="r-codename" placeholder="EX: FALCÃO, ORÁCULO, VORTEX" maxlength="20" style="text-transform:uppercase;">
+          </div>
+          <p class="err-msg" id="err-r-codename">⚠ Codinome inválido.</p>
+        </div>
+
+        <div class="lg-field">
+          <label class="lg-label" for="r-clearance">// NÍVEL DE ACESSO SOLICITADO</label>
+          <select class="lg-select" id="r-clearance">
+            <option value="NÍVEL 1">NÍVEL 1 — Acesso básico</option>
+            <option value="NÍVEL 2">NÍVEL 2 — Acesso intermediário</option>
+            <option value="NÍVEL 3">NÍVEL 3 — Acesso avançado</option>
+            <option value="NÍVEL 4">NÍVEL 4 — Acesso restrito</option>
+            <option value="NÍVEL 5">NÍVEL 5 — Acesso ultrasecreto</option>
+          </select>
+        </div>
+
+        <div class="lg-field">
+          <label class="lg-label" for="r-pwd">// CÓDIGO DE ACESSO</label>
+          <div class="lg-input-wrap">
+            <input class="lg-input" type="password" id="r-pwd" placeholder="Mínimo 6 caracteres" autocomplete="new-password" maxlength="32">
+          </div>
+          <div class="strength-bar">
+            <div class="strength-seg"></div>
+            <div class="strength-seg"></div>
+            <div class="strength-seg"></div>
+            <div class="strength-seg"></div>
+          </div>
+          <div id="strength-label" class="strength-label"></div>
+          <p class="err-msg" id="err-r-pwd">⚠ Mínimo 6 caracteres.</p>
+        </div>
+
+        <div class="lg-field">
+          <label class="lg-label" for="r-pwd2">// CONFIRMAR CÓDIGO DE ACESSO</label>
+          <div class="lg-input-wrap">
+            <input class="lg-input" type="password" id="r-pwd2" placeholder="Repita o código" autocomplete="new-password" maxlength="32">
+          </div>
+          <p class="err-msg" id="err-r-pwd2">⚠ Códigos não coincidem.</p>
+        </div>
+
+        <button class="lg-btn lg-btn-primary" id="btn-register" disabled style="margin-top:0.5rem;"><span>SUBMETER CREDENCIAL</span></button>
+        <div class="switch-link switch-link-reg" style="margin-top:1rem;">
+          Já possui credencial? <a onclick="showLoginPanel('lg-panel-login')">AUTENTICAR</a>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <button class="back-btn" id="btn-back-from-register">← VOLTAR AO LOGIN</button>
+        </div>
+      </div>
+
+
+      <!-- ─── PAINEL DE RECUPERAÇÃO ─── -->
+      <div class="lg-screen hidden" id="lg-panel-rec" style="position:relative;">
+        <div class="lg-avatar-wrap">
+          <div class="lg-avatar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+            </svg>
+          </div>
+        </div>
+        <h2 class="lg-title">RECUPERAÇÃO DE ACESSO</h2>
+        <p class="lg-desc">Informe seu ID de agente. Um link de reativação será enviado pelo canal seguro.</p>
+
+        <div class="lg-field" id="rec-field">
+          <label class="lg-label" for="i-rec">// ID DE AGENTE (E-MAIL)</label>
+          <div class="lg-input-wrap">
+            <input class="lg-input" type="email" id="i-rec" placeholder="agente@nexus.net">
+          </div>
+          <p class="err-msg" id="err-rec">⚠ ID de agente inválido.</p>
+        </div>
+
+        <div class="rec-ok" id="rec-ok">
+          <div class="check-circle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green)"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <p>Link seguro transmitido para <strong id="sent-to"></strong>.<br>Verifique o canal criptografado. Expira em 15 min.</p>
+        </div>
+
+        <button class="lg-btn lg-btn-primary" id="btn-rec" style="margin-top:0.4rem"><span>ENVIAR LINK SEGURO</span></button>
+        <button class="lg-btn lg-btn-ghost" id="btn-back">← RETORNAR AO LOGIN</button>
+      </div>
+
+    </div><!-- /.lg-card -->
+    <p class="lg-foot">© 2026 NEXUS Intelligence Network · Protocolo de Sigilo Ativo · Identificação mascarada</p>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SCREEN 3 — ADMIN PANEL
+══════════════════════════════════════════════ -->
+<div id="s-admin" class="screen">
+  <div style="width:100%;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);">
+
+    <div class="admin-topbar">
+      <div>
+        <div class="admin-logo">NEXUS <span>// PAINEL ADMINISTRATIVO</span></div>
+      </div>
+      <div style="display:flex;gap:0.8rem;align-items:center;">
+        <span style="font-family:'Share Tech Mono',monospace;font-size:0.6rem;color:var(--text3);">ADMIN@NEXUS.NET</span>
+        <button class="admin-exit" onclick="doLogout()">⏻ DESCONECTAR</button>
+      </div>
+    </div>
+
+    <div class="admin-body">
+      <h1 class="admin-title">GESTÃO DE AGENTES</h1>
+      <p class="admin-subtitle">// Controle de credenciais · Aprovações · Revisão de acesso · Base de dados NEXUS</p>
+
+      <div class="admin-stats">
+        <div class="stat-card">
+          <div class="stat-num amber" id="stat-pending">0</div>
+          <div class="stat-label">// Em Análise</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num green" id="stat-approved">0</div>
+          <div class="stat-label">// Aprovados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num red" id="stat-denied">0</div>
+          <div class="stat-label">// Negados / Revogados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num blue" id="stat-total">0</div>
+          <div class="stat-label">// Total de Agentes</div>
+        </div>
+      </div>
+
+      <div class="admin-controls">
+        <input type="text" class="admin-search" id="admin-search" placeholder="// Buscar por codinome, e-mail ou nível...">
+        <select class="admin-filter" id="admin-filter">
+          <option value="all">TODOS OS STATUS</option>
+          <option value="pending">EM ANÁLISE</option>
+          <option value="approved">APROVADOS</option>
+          <option value="denied">NEGADOS</option>
+        </select>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>// CODINOME</th>
+              <th>// ID DE AGENTE</th>
+              <th>// STATUS</th>
+              <th>// NÍVEL</th>
+              <th>// REGISTRO</th>
+              <th>// ÚLTIMO ACESSO</th>
+              <th>// AÇÕES</th>
+            </tr>
+          </thead>
+          <tbody id="admin-tbody">
+            <tr><td colspan="7" style="text-align:center;padding:2.5rem;color:var(--text3);font-family:'Share Tech Mono',monospace;font-size:0.72rem;">// CARREGANDO BASE DE DADOS...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:1.5rem;padding:1rem;border:1px solid var(--border);background:var(--bg2);">
+        <p style="font-family:'Share Tech Mono',monospace;font-size:0.62rem;color:var(--text3);line-height:1.8;">
+          // ACESSO ADMINISTRATIVO: <span style="color:var(--amber);">admin@nexus.net</span> / <span style="color:var(--amber);">NEXUS001</span> &nbsp;·&nbsp;
+          Agentes aguardando aprovação devem ser revisados antes de acessar o portal.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-modal-bg" id="admin-modal-deny">
+    <div class="admin-modal">
+      <h3>✕ NEGAR / REVOGAR ACESSO</h3>
+      <p>Agente: <strong id="deny-email-label" style="color:var(--amber);">—</strong><br>Informe o motivo da negação (opcional):</p>
+      <input type="text" class="lg-input" id="deny-reason" placeholder="Ex: Documentação insuficiente..." style="width:100%;margin-bottom:1.2rem;">
+      <div class="modal-actions">
+        <button class="lg-btn lg-btn-ghost" id="btn-deny-cancel" style="margin-top:0;">CANCELAR</button>
+        <button class="lg-btn lg-btn-primary" id="btn-deny-confirm" style="background:var(--red);color:#fff;"><span>CONFIRMAR</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-modal-bg" id="admin-modal-delete">
+    <div class="admin-modal">
+      <h3>⊘ EXCLUIR AGENTE</h3>
+      <p>Tem certeza que deseja excluir permanentemente o agente:<br><strong id="delete-email-label" style="color:var(--red);">—</strong><br><br>Esta ação não pode ser desfeita.</p>
+      <div class="modal-actions">
+        <button class="lg-btn lg-btn-ghost" id="btn-delete-cancel" style="margin-top:0;">CANCELAR</button>
+        <button class="lg-btn lg-btn-primary" id="btn-delete-confirm" style="background:var(--red);color:#fff;"><span>EXCLUIR</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SCREEN 4 — SITE DE NOTÍCIAS
+     (ticker bar removido)
+══════════════════════════════════════════════ -->
+<div id="s-site" class="screen">
+
+  <header class="site-header">
+    <div class="header-meta">
+      <span id="date-label">—</span>
+      <span>TRANSMISSÃO SEGURA · CRIPTOGRAFADA · BRASIL</span>
+      <div class="user-badge-hdr">
+        <div class="user-avatar-hdr" id="u-initials">—</div>
+        <span id="u-email-hdr">—</span>
+        <button class="logout-btn" onclick="doLogout()">DESCONECTAR</button>
+      </div>
+    </div>
+    <div class="header-brand">
+      <div>
+        <div class="brand-name">NE<span>X</span>US</div>
+        <div class="brand-sub">// Rede de Inteligência Classificada · Est. 2012 · Acesso Restrito</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <div class="classification-level">ULTRASECRETO</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="#" class="active" onclick="setNav(this,event)">ARQUIVOS</a>
+      <a href="#" onclick="setNav(this,event)">EXTRATERRESTRES</a>
+      <a href="#" onclick="setNav(this,event)">GOVERNO OCULTO</a>
+      <a href="#" onclick="setNav(this,event)">EXPERIMENTOS</a>
+      <a href="#" onclick="setNav(this,event)">TECNOLOGIA SUPRIMIDA</a>
+      <a href="#" onclick="setNav(this,event)">FENÔMENOS</a>
+      <a href="#" onclick="setNav(this,event)">SOCIEDADES SECRETAS</a>
+      <a href="#" onclick="setNav(this,event)">DOCUMENTOS VAZADOS</a>
+      <a href="#" onclick="setNav(this,event)">DEPOIMENTOS</a>
+      <a href="#" onclick="setNav(this,event)">ANÁLISE</a>
+    </div>
+  </nav>
+
+  <!-- ════ DYNAMIC CONTENT AREA ════ -->
+  <div class="page-wrap">
+    <div id="site-content">
+      <!-- Content injected dynamically by renderCategoryContent() -->
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fn">NEXUS</div>
+          <p>Rede de inteligência independente desde 2012. Comprometida com a divulgação de informações suprimidas, fenômenos inexplicados e operações encobertas de interesse público. Fontes protegidas. Servidores offshore. Sem afiliação governamental ou corporativa.</p>
+        </div>
+        <div class="footer-col"><h5>// ARQUIVOS</h5><ul><li><a href="#">Extraterrestres</a></li><li><a href="#">Governo Oculto</a></li><li><a href="#">Experimentos</a></li><li><a href="#">Tecnologia Suprimida</a></li><li><a href="#">Fenômenos</a></li><li><a href="#">Sociedades Secretas</a></li></ul></div>
+        <div class="footer-col"><h5>// PROTOCOLO</h5><ul><li><a href="#">Quem Somos</a></li><li><a href="#">Agentes</a></li><li><a href="#">Enviar Documento</a></li><li><a href="#">Contato Seguro</a></li><li><a href="#">Canal Tor</a></li></ul></div>
+        <div class="footer-col"><h5>// LEGAL</h5><ul><li><a href="#">Política de Sigilo</a></li><li><a href="#">Termos de Acesso</a></li><li><a href="#">Código de Ética</a></li><li><a href="#">Proteção de Fontes</a></li><li><a href="#">Protocolo NEXUS-7</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NEXUS Intelligence Network. Todos os arquivos protegidos.</span>
+        <span>TRANSMISSÃO CRIPTOGRAFADA · LOCALIZAÇÃO MASCARADA · SERVIDORES: JURISDIÇÃO NEUTRA</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /#s-site -->
+
+<script src="js/app.js"></script>
+</body>
+</html>

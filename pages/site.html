@@ -1,0 +1,208 @@
+<!-- ══════════════════════════════════════════════
+     pages/site.html
+     NEXUS — Partial: Main News Site Screen
+══════════════════════════════════════════════ -->
+<div id="s-site" class="screen">
+
+  <!-- TICKER -->
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span>DOCUMENTO VAZADO: Reunião secreta da ONU sobre "fenômenos aéreos não-identificados" em março de 2026</span>
+      <span>ALERTA: Satélites detectam anomalia térmica de origem desconhecida no Oceano Índico</span>
+      <span>FONTE INTERNA: Projeto "Aquila" — governo suprimiu relatório sobre recuperação de materiais em 1994</span>
+      <span>EXCLUSIVO: Ex-funcionário da CIA descreve instalação subterrânea em Nevada desconhecida do público</span>
+      <span>DECRIPTADO: Comunicação interceptada menciona "entidades não-humanas" em protocolo de contato</span>
+      <span>DOCUMENTO VAZADO: Reunião secreta da ONU sobre "fenômenos aéreos não-identificados" em março de 2026</span>
+      <span>ALERTA: Satélites detectam anomalia térmica de origem desconhecida no Oceano Índico</span>
+      <span>FONTE INTERNA: Projeto "Aquila" — governo suprimiu relatório sobre recuperação de materiais em 1994</span>
+      <span>EXCLUSIVO: Ex-funcionário da CIA descreve instalação subterrânea em Nevada desconhecida do público</span>
+      <span>DECRIPTADO: Comunicação interceptada menciona "entidades não-humanas" em protocolo de contato</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-meta">
+      <span id="date-label">—</span>
+      <span>TRANSMISSÃO SEGURA · CRIPTOGRAFADA · BRASIL</span>
+      <div class="user-badge-hdr">
+        <div class="user-avatar-hdr" id="u-initials">—</div>
+        <span id="u-email-hdr">—</span>
+        <button class="logout-btn" onclick="doLogout()">DESCONECTAR</button>
+      </div>
+    </div>
+    <div class="header-brand">
+      <div>
+        <div class="brand-name">NE<span>X</span>US</div>
+        <div class="brand-sub">// Rede de Inteligência Classificada · Est. 2012 · Acesso Restrito</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <div class="classification-level">ULTRASECRETO</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="#" class="active" onclick="setNav(this,event)">ARQUIVOS</a>
+      <a href="#" onclick="setNav(this,event)">EXTRATERRESTRES</a>
+      <a href="#" onclick="setNav(this,event)">GOVERNO OCULTO</a>
+      <a href="#" onclick="setNav(this,event)">EXPERIMENTOS</a>
+      <a href="#" onclick="setNav(this,event)">TECNOLOGIA SUPRIMIDA</a>
+      <a href="#" onclick="setNav(this,event)">FENÔMENOS</a>
+      <a href="#" onclick="setNav(this,event)">SOCIEDADES SECRETAS</a>
+      <a href="#" onclick="setNav(this,event)">DOCUMENTOS VAZADOS</a>
+      <a href="#" onclick="setNav(this,event)">DEPOIMENTOS</a>
+      <a href="#" onclick="setNav(this,event)">ANÁLISE</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="page-wrap">
+
+    <!-- Hero -->
+    <section class="hero-zone anim">
+      <div class="hero-lead">
+        <div class="hero-img-wrap">
+          <img src="https://picsum.photos/seed/ufo001/1200/675" alt="Arquivo classificado">
+          <div class="hero-img-overlay"></div>
+          <div class="hero-img-label">ARQUIVO #NX-7741 // CONFIDENCIAL</div>
+        </div>
+        <p class="hero-caption">Fonte: Documento desclassificado parcialmente pelo FOIA — Agência Nacional de Segurança, 2025</p>
+        <span class="hero-kicker">// DESTAQUE CLASSIFICADO</span>
+        <h1 class="hero-h1">Pentágono confirma: 17 objetos de origem "não-convencional" recuperados entre 1947 e 2003 ainda sob custódia governamental</h1>
+        <p class="hero-deck">Documentos internos obtidos por fonte anônima revelam a existência de um programa ultrassecreto de análise de materiais com propriedades desconhecidas pela física convencional. A reportagem inclui coordenadas de armazenamento e transcrições de reuniões classificadas.</p>
+        <div class="byline">Por <strong>AGENTE ANÔNIMO // CODINOME: CARTÓGRAFO</strong> &nbsp;//&nbsp; 19 MAR 2026 &nbsp;//&nbsp; 8 min leitura</div>
+        <span class="read-more">ACESSAR DOSSIÊ COMPLETO →</span>
+      </div>
+      <aside class="hero-sidebar">
+        <div class="side-story">
+          <span class="cat-tag">NÍVEL 4</span>
+          <img class="side-img" src="https://picsum.photos/seed/moon55/600/375" alt="">
+          <p class="side-title">Fotos originais da Apollo 20 mostram estrutura artificial de 3,5 km na Lua — NASA nega existência da missão</p>
+          <div class="byline">// 22 min atrás</div>
+        </div>
+        <div class="side-story">
+          <span class="cat-tag">EXPERIMENTO</span>
+          <img class="side-img" src="https://picsum.photos/seed/lab99/600/375" alt="">
+          <p class="side-title">Projeto MK-Ultra: documentos recém-desclassificados revelam fase 3 nunca divulgada ao público</p>
+          <div class="byline">// 1h15 atrás</div>
+        </div>
+        <div class="side-story">
+          <span class="cat-tag">CONTATO</span>
+          <img class="side-img" src="https://picsum.photos/seed/signal77/600/375" alt="">
+          <p class="side-title">Sinal de rádio de origem inexplicável captado por 3 radiotelescópios independentes nas últimas 72 horas</p>
+          <div class="byline">// 3h atrás</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Mais Lidos -->
+    <div class="sec-head anim"><span class="lbl">// ARQUIVOS MAIS ACESSADOS</span><div class="ln"></div></div>
+    <div class="three-col anim">
+      <div class="col-story">
+        <span class="cat-tag">GOVERNO OCULTO</span>
+        <img class="col-img" src="https://picsum.photos/seed/gov33/600/400" alt="">
+        <h3 class="col-title">A "Comissão das Sombras": como um grupo de 12 burocratas controla decisões que nunca chegam a parlamentos</h3>
+        <p class="col-desc col-desc-mono">Fonte revela estrutura de poder paralela operando dentro de 7 governos ocidentais desde 1971, imune a processos eleitorais.</p>
+        <div class="byline">// 18 min atrás · 5 min leitura</div>
+      </div>
+      <div class="col-story">
+        <span class="cat-tag">TECNOLOGIA SUPRIMIDA</span>
+        <img class="col-img" src="https://picsum.photos/seed/tech44/600/400" alt="">
+        <h3 class="col-title">Motor de energia livre patenteado em 1981 e imediatamente confiscado: onde está o inventor?</h3>
+        <p class="col-desc col-desc-mono">Documentos da USPTO mostram patente cancelada 48h após aprovação. Inventor desapareceu em 1983. Família ainda busca respostas.</p>
+        <div class="byline">// 2 horas atrás · 4 min leitura</div>
+      </div>
+      <div class="col-story">
+        <span class="cat-tag">FENÔMENOS</span>
+        <img class="col-img" src="https://picsum.photos/seed/phen88/600/400" alt="">
+        <h3 class="col-title">Portais geomagnéticos: cientistas confirmam fenômeno que governos chamam de "falha de radar"</h3>
+        <p class="col-desc col-desc-mono">Três bases militares no Atlântico Sul registram anomalias coincidentes. Correlação com avistamentos UAP: 94%.</p>
+        <div class="byline">// 4 horas atrás · 6 min leitura</div>
+      </div>
+    </div>
+
+    <!-- Feature strip -->
+    <div class="feature-strip anim">
+      <div class="feature-text">
+        <span class="feat-kicker">// DOSSIÊ ESPECIAL · ACESSO NÍVEL 5</span>
+        <p class="feat-h">"A Agenda de Controle Cognitivo: como algoritmos e frequências eletromagnéticas moldam o que você acredita ser real"</p>
+        <p class="feat-p">Uma investigação de 18 meses com 43 fontes dentro de agências de inteligência, universidades e corporações de mídia — sobre o programa mais ambicioso de engenharia social da história humana.</p>
+        <p class="feat-by">Agente: VESPEIRO · Série especial · 22 min leitura · Criptografado</p>
+        <span class="read-more" style="color:var(--amber)">ACESSAR DOSSIÊ COMPLETO →</span>
+      </div>
+      <img class="feat-img" src="https://picsum.photos/seed/mind66/800/520" alt="">
+    </div>
+
+    <!-- Em Alta + Widgets -->
+    <div class="sec-head anim"><span class="lbl">// TRANSMISSÕES RECENTES</span><div class="ln"></div></div>
+    <div class="bottom-wrap anim">
+      <div class="ranking-col">
+        <div class="rank-list">
+          <div class="rank-item"><div class="rank-num">01</div><div class="rank-body"><p class="rank-title">Crop circles no interior do Paraná: análise do solo revela alterações moleculares inexplicáveis pela ciência convencional</p><p class="rank-meta">AGENTE: FÊNIX · FENÔMENOS · 30 min atrás</p></div></div>
+          <div class="rank-item"><div class="rank-num">02</div><div class="rank-body"><p class="rank-title">Protocolo "Mão Morta": o plano secreto de continuidade de governo que contradiz todas as constituições ocidentais</p><p class="rank-meta">AGENTE: ORÁCULO · GOVERNO OCULTO · 1h atrás</p></div></div>
+          <div class="rank-item"><div class="rank-num">03</div><div class="rank-body"><p class="rank-title">Entrevista exclusiva: ex-piloto da Marinha descreve encontro de 40 minutos com objeto de 90 metros a 300 km/h</p><p class="rank-meta">DEPOIMENTOS · 2h atrás</p></div></div>
+          <div class="rank-item"><div class="rank-num">04</div><div class="rank-body"><p class="rank-title">Base Antártica Neuschwabenland: imagens de satélite 2025 mostram atividade térmica subterrânea em local teoricamente desabitado</p><p class="rank-meta">ARQUIVOS · 3h atrás</p></div></div>
+          <div class="rank-item"><div class="rank-num">05</div><div class="rank-body"><p class="rank-title">O vírus X-17: documentos do CDC indicam patógeno de "origem não-convencional" monitorado desde 2019</p><p class="rank-meta">EXPERIMENTOS · 4h atrás</p></div></div>
+          <div class="rank-item"><div class="rank-num">06</div><div class="rank-body"><p class="rank-title">Arquivos Majestic-12: análise grafológica de 2025 confirma autenticidade de documentos considerados falsos desde 1987</p><p class="rank-meta">EXTRATERRESTRES · 6h atrás</p></div></div>
+        </div>
+      </div>
+      <div class="widget-col">
+        <div class="widget">
+          <div class="widget-head">// STATUS DA REDE</div>
+          <div class="weather-row" style="flex-direction:column;align-items:flex-start;gap:0.6rem;">
+            <div style="display:flex;gap:0.5rem;align-items:center;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 2s infinite;"></div>
+              <span style="font-family:'Share Tech Mono',monospace;font-size:0.72rem;color:var(--green);">TRANSMISSÃO ATIVA</span>
+            </div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--text2);line-height:1.8;">
+              AGENTES ONLINE: <span style="color:var(--green)">1.847</span><br>
+              DOCUMENTOS NOVOS: <span style="color:var(--amber)">23</span><br>
+              NÍVEL DE AMEAÇA: <span style="color:var(--red)">ELEVADO</span><br>
+              CRIPTOGRAFIA: <span style="color:var(--green)">AES-256</span><br>
+              VPN: <span style="color:var(--green)">ATIVA · 14 nós</span>
+            </div>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget-head">// MONITORAMENTO</div>
+          <div class="stock-row"><span>AVISTAMENTOS UAP/24H</span><span class="up">▲ 47</span></div>
+          <div class="stock-row"><span>BUSCAS SUPRIMIDAS</span><span class="down">▼ CENSUR.</span></div>
+          <div class="stock-row"><span>DOCS. DESCLASSIFICADOS</span><span class="up">▲ 12 NOVOS</span></div>
+          <div class="stock-row"><span>FONTES ATIVAS</span><span class="up">▲ 203</span></div>
+          <div class="stock-row"><span>TENTATIVAS DE ACESSO</span><span class="down">▼ BLOQUEADAS</span></div>
+          <div class="stock-row"><span>NÍVEL GEOMAGNÉTICO</span><span style="color:var(--amber)">● ANOMALIA</span></div>
+        </div>
+        <div class="widget">
+          <div class="widget-head">// CANAL SEGURO</div>
+          <p class="nl-text">Receba transmissões classificadas diretamente. Canal criptografado. Identidade protegida por protocolo NEXUS-7.</p>
+          <input class="nl-input" id="nl-email" type="email" placeholder="agente@nexus.net">
+          <button class="nl-btn" id="nl-btn">ATIVAR TRANSMISSÃO</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.page-wrap -->
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fn">NEXUS</div>
+          <p>Rede de inteligência independente desde 2012. Comprometida com a divulgação de informações suprimidas, fenômenos inexplicados e operações encobertas de interesse público. Fontes protegidas. Servidores offshore. Sem afiliação governamental ou corporativa.</p>
+        </div>
+        <div class="footer-col"><h5>// ARQUIVOS</h5><ul><li><a href="#">Extraterrestres</a></li><li><a href="#">Governo Oculto</a></li><li><a href="#">Experimentos</a></li><li><a href="#">Tecnologia Suprimida</a></li><li><a href="#">Fenômenos</a></li><li><a href="#">Sociedades Secretas</a></li></ul></div>
+        <div class="footer-col"><h5>// PROTOCOLO</h5><ul><li><a href="#">Quem Somos</a></li><li><a href="#">Agentes</a></li><li><a href="#">Enviar Documento</a></li><li><a href="#">Contato Seguro</a></li><li><a href="#">Canal Tor</a></li></ul></div>
+        <div class="footer-col"><h5>// LEGAL</h5><ul><li><a href="#">Política de Sigilo</a></li><li><a href="#">Termos de Acesso</a></li><li><a href="#">Código de Ética</a></li><li><a href="#">Proteção de Fontes</a></li><li><a href="#">Protocolo NEXUS-7</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NEXUS Intelligence Network. Todos os arquivos protegidos.</span>
+        <span>TRANSMISSÃO CRIPTOGRAFADA · LOCALIZAÇÃO MASCARADA · SERVIDORES: JURISDIÇÃO NEUTRA</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /#s-site -->
